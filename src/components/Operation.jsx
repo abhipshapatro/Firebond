@@ -47,6 +47,7 @@ const Operation = ({ opr, setOpr, arg, updateOpr }) => {
         }
     }, [opr]);
 
+
     return (
         <div>
             <div>
@@ -103,7 +104,7 @@ const Operation = ({ opr, setOpr, arg, updateOpr }) => {
                     </div>
                 )}
 
-
+                
             </div>
         </div>
     )

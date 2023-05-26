@@ -13,14 +13,14 @@ const Main = () => {
             case "constant":
                 return operation.value === "true";          
             case "argument":
-                const result = arg.filter((argument) => operation.value === argument.input);//arg=s,d 
+                const result = arg.filter((argument) => operation.value === argument.input);
                 return result[0] ? result[0].value === "true" : false ;
             case "and":
                 return logic(operation.upper) && logic(operation.lower); 
             case "or":
                 return logic(operation.upper) || logic(operation.lower); 
             default:
-                return false;
+                return "undefined";
         }
         
     }
@@ -29,7 +29,7 @@ const Main = () => {
   return (
     <div>
         <Argument arg={arg} setArg={setArg} /> <br />
-        <Operation opr={opr} setOpr={setOpr} arg={arg} />
+        <Operation opr={opr} setOpr={setOpr} arg={arg} /> <br />
         <h3>Result: {logic(opr).toString()}</h3>
     </div>
   )
